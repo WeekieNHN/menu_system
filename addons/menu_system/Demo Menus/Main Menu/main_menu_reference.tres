@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MenuReference" load_steps=2 format=3 uid="uid://kku8hovhlyaj"]
+
+[ext_resource type="Script" path="res://addons/menu_system/Scripts/menu_reference.gd" id="1_b0wpx"]
+
+[resource]
+script = ExtResource("1_b0wpx")
+menu_name = "Main"
+menu_path = "res://addons/menu_system/Demo Menus/Main Menu/main_menu.tscn"
