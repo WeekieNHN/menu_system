@@ -3,11 +3,13 @@
 [ext_resource type="Script" path="res://addons/menu_system/Autoloads/menu_manager.gd" id="1_th30b"]
 [ext_resource type="Script" path="res://addons/menu_system/Scripts/menu_reference.gd" id="2_23fyk"]
 [ext_resource type="Resource" uid="uid://kku8hovhlyaj" path="res://addons/menu_system/Demo Menus/Main Menu/main_menu_reference.tres" id="3_7qb3j"]
-[ext_resource type="Resource" uid="uid://ru2q3fpcnauk" path="res://addons/menu_system/Demo Menus/Splash Screen/splash_screen_reference.tres" id="4_hfvjq"]
+[ext_resource type="PackedScene" uid="uid://ddiwf3muefir6" path="res://addons/menu_system/Commands/menu_commands.tscn" id="5_jv2x5"]
 
 [node name="MenuManager" type="Node"]
 script = ExtResource("1_th30b")
 start_menu = ExtResource("3_7qb3j")
-menus = Array[ExtResource("2_23fyk")]([ExtResource("4_hfvjq"), ExtResource("3_7qb3j")])
+menus = Array[ExtResource("2_23fyk")]([ExtResource("3_7qb3j")])
 
 [node name="MenuLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuCommands" parent="." instance=ExtResource("5_jv2x5")]

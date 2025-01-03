@@ -1,7 +1,5 @@
 extends Node
 
-@export_group("Splash Screen")
-
 @export_group("Start Menu")
 @export var start_menu: MenuReference = null
 
@@ -15,7 +13,6 @@ var menu_scenes = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
 	# Preload each menu to scenes dict
 	for ref in menus:
 		# Only accept existing references
@@ -26,7 +23,6 @@ func _ready() -> void:
 			continue
 		# Otherwise load valid Menu Reference to dict
 		menu_scenes[ref.menu_name] = load(ref.menu_path)
-	
 	# Check if start menu path is given and resource exists
 	# If so, load the start menu
 	if start_menu == null:

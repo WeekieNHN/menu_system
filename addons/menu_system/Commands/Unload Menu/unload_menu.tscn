@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct7gko8lio80c"]
+
+[ext_resource type="Script" path="res://addons/menu_system/Commands/Unload Menu/unload_menu.gd" id="1_rrs0k"]
+
+[node name="UnloadMenu" type="Node"]
+script = ExtResource("1_rrs0k")
+command = "unload_menu"
+group = "Menu System"
+help_text = "Unloads the currently loaded menu if one is loaded."
+help_text_short = "Unloads the currently loaded menu if one is loaded."

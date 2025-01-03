@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://vg5efultj2d0"]
+
+[ext_resource type="Script" path="res://addons/menu_system/Commands/Load Menu/load_menu.gd" id="1_hqnji"]
+
+[node name="LoadMenu" type="Node"]
+script = ExtResource("1_hqnji")
+command = "load_menu"
+group = "Menu System"
+help_text = "Loads specific menu. Type 'load_menu <menu_name>' to try it out. If you do not know which menus are available you can type `load_menu` and it will present a list."
+help_text_short = "Loads specific menu."

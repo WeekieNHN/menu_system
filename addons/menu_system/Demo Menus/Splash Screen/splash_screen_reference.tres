@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="MenuReference" load_steps=2 format=3 uid="uid://ru2q3fpcnauk"]
-
-[ext_resource type="Script" path="res://addons/menu_system/Scripts/menu_reference.gd" id="1_xuva0"]
-
-[resource]
-script = ExtResource("1_xuva0")
-menu_name = "Splash"
-menu_path = ""
