@@ -19,11 +19,20 @@ If **do** want to integrate with the console: Just leave everything as is.
 
 ### Loading Menus
 
+Menus can be loaded by calling `MenuManager.load_menu(menu_name: String, load_args)`
+
+`menu_name` - a String menu name that corresponds to a `MenuReference` in the `menus` list.
+`load_args` - argument that get passed to the menu. Can be any type.
+
 ### Unloading Menus
+
+Menus can be loaded by calling `MenuManager.unload_menu(unload_args)`
+
+`unload_args` - argument that get passed to the menu. Can be any type.
 
 ### Start Menu
 
-### Load Args
+If a `start_menu` is specified in the `MenuManager` it will be loaded on _ready().
 
 ### Focus
 
@@ -53,7 +62,13 @@ The project name, and version numbers are pulled from ProjectSettings.
 
 ### MenuReference Resource
 
+Menus are reference using `MenuReference` resources. `MenuManager` keeps a list of these. A `MenuReference` contains 2 fields, a name, and a path. This is basically just a way to make a typed dictionary in Godot 4.3, if you're using 4.4 I recommend updating this (if I haven't already).
+
+The name is what you'll use in `MenuManager.load_menu(menu_name)` to reference the menu. The path should be to a scene with a `Menu`-derived node as its root.
+
 ### Adding Menu to MenuManager
+
+Add a `MenuReference` to the `menus` list in `MenuManager`. It will get added on load. Then it can be loaded/unloaded.
 
 ## Localization
 
