@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ct7gko8lio80c"]
 
-[ext_resource type="Script" path="res://addons/menu_system/Commands/Unload Menu/unload_menu.gd" id="1_rrs0k"]
+[ext_resource type="Script" uid="uid://ch54edto8ke0o" path="res://addons/menu_system/Commands/Unload Menu/unload_menu.gd" id="1_rrs0k"]
 
 [node name="UnloadMenu" type="Node"]
 script = ExtResource("1_rrs0k")

@@ -1,11 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddiwf3muefir6"]
 
-[ext_resource type="Script" path="res://addons/dev_console/Commands/command_aggregator.gd" id="1_g6sdn"]
 [ext_resource type="PackedScene" uid="uid://vg5efultj2d0" path="res://addons/menu_system/Commands/Load Menu/load_menu.tscn" id="2_ie5iw"]
 [ext_resource type="PackedScene" uid="uid://ct7gko8lio80c" path="res://addons/menu_system/Commands/Unload Menu/unload_menu.tscn" id="3_j8dir"]
 
+[sub_resource type="Resource" id="Resource_sv43d"]
+metadata/__load_path__ = "res://addons/dev_console/Commands/command_aggregator.gd"
+
 [node name="MenuCommands" type="Node"]
-script = ExtResource("1_g6sdn")
+script = SubResource("Resource_sv43d")
 
 [node name="LoadMenu" parent="." instance=ExtResource("2_ie5iw")]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3kvabhrnwa7e"]
 
-[ext_resource type="Script" path="res://addons/menu_system/Demo Menus/Main Menu/main_menu.gd" id="1_kh0si"]
+[ext_resource type="Script" uid="uid://bm8rth3vtoqc7" path="res://addons/menu_system/Demo Menus/Main Menu/main_menu.gd" id="1_kh0si"]
 [ext_resource type="Resource" uid="uid://kku8hovhlyaj" path="res://addons/menu_system/Demo Menus/Main Menu/main_menu_reference.tres" id="2_hvyvp"]
 [ext_resource type="LabelSettings" uid="uid://3x62so8yj56b" path="res://addons/menu_system/Demo Menus/Main Menu/main_menu_title.tres" id="2_lwq1x"]
 [ext_resource type="StyleBox" uid="uid://dmu2qodh6aji5" path="res://addons/menu_system/Demo Menus/Main Menu/style_box_empty.tres" id="3_c7jhp"]
