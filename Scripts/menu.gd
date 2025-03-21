@@ -1,6 +1,6 @@
 class_name Menu extends Control
 
-@export var menu_ref: MenuReference
+@export var menu_name: String
 
 # Hook any on_load logic to this signal
 signal on_menu_loaded

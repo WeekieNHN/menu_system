@@ -1,36 +1,41 @@
 extends Node
 
 @export_group("Start Menu")
-@export var start_menu: MenuReference = null
+@export var start_menu_name: String = ""
 
 @export_group("Menus")
-@export var menus: Array[MenuReference] = []
+@export var menus: Dictionary[String, String] = {} # KVPs are menu_name, menu_path
 
 var active_menu: Menu = null
-var menu_scenes = {} 
+var menu_scenes: Dictionary = {} 
 
 @onready var menu_layer: CanvasLayer = $MenuLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Preload each menu to scenes dict
-	for ref in menus:
-		# Only accept existing references
-		if ref == null: continue
-		# Validate that menu scene exists
-		if ref.menu_path == "" or !ResourceLoader.exists(ref.menu_path):
-			print("MenuSystem: Invalid path associated with '%s'" % ref.menu_name)
+	# Preload each menu to scenes
+	for key in menus:
+		# Get key so we can operate with key-value pairs
+		var value = menus[key]
+		# Skip if key or value is empty
+		if key == "" or value == "": continue
+		# Skip if menu scene doesn't exist
+		if !ResourceLoader.exists(value):
+			print("MenuSystem: Invalid path associated with '%s'" % key)
 			continue
-		# Otherwise load valid Menu Reference to dict
-		menu_scenes[ref.menu_name] = load(ref.menu_path)
+		# Otherwise, load menu to menu scenes dict
+		menu_scenes[key] = load(value)
+	
 	# Check if start menu path is given and resource exists
 	# If so, load the start menu
-	if start_menu == null:
+	if start_menu_name == "":
 		print("MenuSystem: No Start Menu path given.")
-	elif !ResourceLoader.exists(start_menu.menu_path):
-		print("MenuSystem: No resource exists at %s." % start_menu.menu_path)
+	elif !menus.has(start_menu_name):
+		print("MenuSystem: Start Menu path is not found in menu dictionary.")
+	elif !ResourceLoader.exists(menus[start_menu_name]):
+		print("MenuSystem: No resource exists at %s." % menus[start_menu_name])
 	else:
-		load_menu(start_menu.menu_name) # Load start menu with no args
+		load_menu(start_menu_name) # Load start menu with no args
 
 func load_menu(menu_name: String, load_args = null) -> void:
 	# Get menu from name
