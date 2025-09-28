@@ -2,7 +2,7 @@ extends Node
 
 
 @export_group("Menu Configuration")
-@export var menu_config: MenuConfig = preload("uid://c5fm8kiu0ncpe")
+@export var menu_config: MenuConfig = preload("res://addons/menu_system/demo_menu_config.tres")
 
 var start_menu_name: String = ""
 var menus: Dictionary[String, String] = {} # KVPs are menu_name, menu_path
