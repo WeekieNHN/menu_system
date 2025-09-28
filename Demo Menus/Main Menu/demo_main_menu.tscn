@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3kvabhrnwa7e"]
 
-[ext_resource type="Theme" uid="uid://bluqnplk818l7" path="res://addons/menu_system/Theme/menu_theme.tres" id="1_653o6"]
-[ext_resource type="Script" uid="uid://bm8rth3vtoqc7" path="res://addons/menu_system/Demo Menus/Main Menu/main_menu.gd" id="1_kh0si"]
+[ext_resource type="Theme" uid="uid://bluqnplk818l7" path="res://addons/menu_system/Theme/demo_menu_theme.tres" id="1_pg0n3"]
+[ext_resource type="Script" uid="uid://bm8rth3vtoqc7" path="res://addons/menu_system/Demo Menus/Main Menu/demo_main_menu.gd" id="2_73g5t"]
 
 [node name="MainMenu" type="Control" node_paths=PackedStringArray("focus_start_node")]
 layout_mode = 3
@@ -10,8 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_653o6")
-script = ExtResource("1_kh0si")
+theme = ExtResource("1_pg0n3")
+script = ExtResource("2_73g5t")
 focus_start_node = NodePath("MainPanel/MarginContainer/GridContainer/VBoxContainer/ButtonVBoxContainer/OnlineButton")
 
 [node name="MainPanel" type="Control" parent="."]
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 
 [node name="ColorRect" type="ColorRect" parent="MainPanel"]
 layout_mode = 1
@@ -30,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 color = Color(0.145098, 0.145098, 0.145098, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="MainPanel"]
@@ -40,7 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 100
@@ -48,77 +48,77 @@ theme_override_constants/margin_bottom = 100
 
 [node name="GridContainer" type="GridContainer" parent="MainPanel/MarginContainer"]
 layout_mode = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 columns = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 
 [node name="TitleLabel" type="Label" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 theme_type_variation = &"HeaderLarge"
 text = "MENU_LABEL_MAINMENU"
 
 [node name="ButtonVBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 alignment = 1
 
 [node name="OnlineButton" type="Button" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer/ButtonVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("1_653o6")
-theme_override_colors/font_hover_color = Color(0.823529, 0.803922, 0.717647, 1)
+theme = ExtResource("1_pg0n3")
 theme_override_colors/font_focus_color = Color(0.823529, 0.803922, 0.717647, 1)
 theme_override_colors/font_pressed_color = Color(0.635294, 0.847059, 0.87451, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.803922, 0.717647, 1)
 text = "MENU_MODE_MULTIPLAYER_ONLINE"
 alignment = 0
 
 [node name="LocalButton" type="Button" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer/ButtonVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("1_653o6")
-theme_override_colors/font_hover_color = Color(0.823529, 0.803922, 0.717647, 1)
+theme = ExtResource("1_pg0n3")
 theme_override_colors/font_focus_color = Color(0.823529, 0.803922, 0.717647, 1)
 theme_override_colors/font_pressed_color = Color(0.635294, 0.847059, 0.87451, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.803922, 0.717647, 1)
 text = "MENU_MODE_MULTIPLAYER_LOCAL"
 alignment = 0
 
 [node name="SettingsButton" type="Button" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer/ButtonVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("1_653o6")
-theme_override_colors/font_hover_color = Color(0.823529, 0.803922, 0.717647, 1)
+theme = ExtResource("1_pg0n3")
 theme_override_colors/font_focus_color = Color(0.823529, 0.803922, 0.717647, 1)
 theme_override_colors/font_pressed_color = Color(0.635294, 0.847059, 0.87451, 1)
+theme_override_colors/font_hover_color = Color(0.823529, 0.803922, 0.717647, 1)
 text = "MENU_OPTIONS"
 alignment = 0
 
 [node name="QuitButton" type="Button" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer/ButtonVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 text = "MENU_LABEL_DESKTOP"
 alignment = 0
 
 [node name="InfoVBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 
 [node name="VersionLabel" type="Label" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer/InfoVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 text = "v0.0.1"
 
 [node name="InfoLabel" type="Label" parent="MainPanel/MarginContainer/GridContainer/VBoxContainer/InfoVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("1_653o6")
+theme = ExtResource("1_pg0n3")
 text = "2016-2025 COMPANY NAME"

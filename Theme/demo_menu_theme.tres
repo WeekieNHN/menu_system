@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://bluqnplk818l7"]
 
-[ext_resource type="StyleBox" uid="uid://dmu2qodh6aji5" path="res://addons/menu_system/Demo Menus/Main Menu/style_box_empty.tres" id="1_8sfv1"]
+[ext_resource type="StyleBox" uid="uid://dmu2qodh6aji5" path="res://addons/menu_system/Demo Menus/Main Menu/demo_style_box_empty.tres" id="1_8sfv1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tc225"]
 

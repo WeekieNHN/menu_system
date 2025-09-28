@@ -1,10 +1,11 @@
 extends Node
 
-@export_group("Start Menu")
-@export var start_menu_name: String = ""
 
-@export_group("Menus")
-@export var menus: Dictionary[String, String] = {} # KVPs are menu_name, menu_path
+@export_group("Menu Configuration")
+@export var menu_config: MenuConfig = preload("uid://c5fm8kiu0ncpe")
+
+var start_menu_name: String = ""
+var menus: Dictionary[String, String] = {} # KVPs are menu_name, menu_path
 
 var active_menu: Menu = null
 var menu_scenes: Dictionary = {} 
@@ -13,6 +14,9 @@ var menu_scenes: Dictionary = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Load menus from resource
+	menus = menu_config.menus
+	start_menu_name = menu_config.start_menu_name
 	# Preload each menu to scenes
 	for key in menus:
 		# Get key so we can operate with key-value pairs

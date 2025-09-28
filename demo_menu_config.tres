@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MenuConfig" load_steps=2 format=3 uid="uid://c5fm8kiu0ncpe"]
+
+[ext_resource type="Script" uid="uid://ce2w38ebeyf7e" path="res://addons/menu_system/Scripts/menu_config.gd" id="1_c6vce"]
+
+[resource]
+script = ExtResource("1_c6vce")
+start_menu_name = "Main Menu"
+menus = Dictionary[String, String]({
+"Main Menu": "res://addons/menu_system/Demo Menus/Main Menu/demo_main_menu.tscn"
+})
+metadata/_custom_type_script = "uid://ce2w38ebeyf7e"
