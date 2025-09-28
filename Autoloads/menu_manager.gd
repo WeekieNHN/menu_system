@@ -51,6 +51,7 @@ func load_menu(menu_name: String, load_args = null) -> void:
 	# If menu is loaded, unload it
 	if active_menu != null: unload_menu("Force")
 	# Load the menu
+	print(menu_scenes[menu_name].instantiate())
 	active_menu = menu_scenes[menu_name].instantiate()
 	# Add active menu to menu_layer
 	menu_layer.add_child(active_menu)

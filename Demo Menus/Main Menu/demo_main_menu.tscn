@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3kvabhrnwa7e"]
+[gd_scene load_steps=3 format=3 uid="uid://ckmu583xm8ytv"]
 
+[ext_resource type="Script" uid="uid://bm8rth3vtoqc7" path="res://addons/menu_system/Demo Menus/Main Menu/demo_main_menu.gd" id="1_odbxh"]
 [ext_resource type="Theme" uid="uid://bluqnplk818l7" path="res://addons/menu_system/Theme/demo_menu_theme.tres" id="1_pg0n3"]
-[ext_resource type="Script" uid="uid://bm8rth3vtoqc7" path="res://addons/menu_system/Demo Menus/Main Menu/demo_main_menu.gd" id="2_73g5t"]
 
 [node name="MainMenu" type="Control" node_paths=PackedStringArray("focus_start_node")]
 layout_mode = 3
@@ -11,7 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_pg0n3")
-script = ExtResource("2_73g5t")
+script = ExtResource("1_odbxh")
+menu_name = "Main"
 focus_start_node = NodePath("MainPanel/MarginContainer/GridContainer/VBoxContainer/ButtonVBoxContainer/OnlineButton")
 
 [node name="MainPanel" type="Control" parent="."]
