@@ -24,4 +24,4 @@ func unload_menu(_unload_args):
 
 func menu_grab_focus() -> void:
 	# Grab focus
-	focus_start_node.grab_focus()
+	if focus_start_node: focus_start_node.grab_focus()
